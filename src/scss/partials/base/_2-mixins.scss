@@ -1,0 +1,35 @@
+
+
+/* center anything */
+@mixin middler {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* helper class */
+
+.middler {
+    @include middler;
+}
+
+/* =================================== */
+
+/* the clearfix hack @include clearfix() */
+@mixin clearfix() {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+/* helper class */
+
+.clearfix {
+    @include clearfix;
+}

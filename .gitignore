@@ -1,0 +1,10 @@
+/node_modules
+dploy.yaml
+/npm-debug.log
+/src/img/store
+/dist/.htaccess
+/.sass-cache
+#ignore all the glob maps for the scss folder, but dont ignore partials and global.scss
+/src/scss/*.scss
+!/src/scss/global.scss
+!/src/scss/partials/*.scss
