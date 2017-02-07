@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "The best project ever.",
   "author": "Dan Devine",
-  "licence": "WTFPL",
+  "license": "WTFPL",
   "repository": {
     "type": "git",
     "url": "git@github.com:danieldevine/haikutron.git"
