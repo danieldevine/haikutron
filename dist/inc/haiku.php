@@ -23,8 +23,8 @@ $hkTwoThree   = new haikuTron("ml=physics", 3);
 
 $hkThreeOne   = new haikuTron("rel_jjb=robot", 2);
 $hkThreeTwo   = new haikuTron("ml=the", 1);
-$hkThreeThree = new haikuTron("ml=science", 2);
+$hkThreeThree = new haikuTron("ml=humanity", 2);
 
-$title = $titleOne->haWord() . $titleTwo->haWord();
+$title = $titleOne->haWord() . " " . $titleTwo->haWord();
 
-$haiku =  $hkOneOne->haWord() . $hkOneTwo->haWord() . $hkOneThree->haWord() . "<br />" . $hkTwoOne->haWord() . $hkTwoTwo->haWord() . $hkTwoThree->haWord() . "<br />" . $hkThreeOne->haWord() . $hkThreeTwo->haWord() . $hkThreeThree->haWord() . "<br />"; ?>
+$haiku =  $hkOneOne->haWord() . " " . $hkOneTwo->haWord() . " " . $hkOneThree->haWord() . "<br />" . $hkTwoOne->haWord() . " " . $hkTwoTwo->haWord() . " " . $hkTwoThree->haWord() . "<br />" . $hkThreeOne->haWord() . " " . $hkThreeTwo->haWord() . " " . $hkThreeThree->haWord() . "<br />"; ?>

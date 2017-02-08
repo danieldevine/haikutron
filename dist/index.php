@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Haikutron | Contemplative Haiku Bot</title>
     <meta name="description" content="Haikutron just wants to write some cool haiku, give him some space meatbags.">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/global.min.css">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -19,14 +19,21 @@
 
     </script>
 </head>
+    <?php include_once('inc/haiku.php') ?>
+    <?php
+        function rand_color() {
+          return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+        }
+    ?>
     <body>
-        <?php include_once('inc/haiku.php') ?>
-        <section class="haiku">
+        <section class="haiku" style="background-color:<?php echo rand_color(); ?>; color:<?php echo rand_color() ?>;">
             <div class="wrapper">
                  <h1><?php echo $title; ?></h1>
+                 <hr />
                  <p>
                      <?php echo $haiku; ?>
                  </p>
+                 <div class="signed">-Haikutron</div>
             </div>
         </section>
     </body>

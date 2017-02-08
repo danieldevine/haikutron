@@ -30,7 +30,7 @@ class haikuTron
 
         foreach ($result as $res) {
             if ($res['numSyllables'] == $this->syllables):
-                return $res['word'] . "&nbsp;";
+                return $res['word'];
             break;
             endif;
         }

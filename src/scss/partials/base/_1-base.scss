@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Amatica SC', cursive;
     position: relative;
     display: flex;
     overflow: hidden;
@@ -11,9 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('https://loremflickr.com/1400/900/science,robot?random=2');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #999;
 
     @include mobile {
         display: block;
