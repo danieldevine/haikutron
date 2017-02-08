@@ -1,7 +1,7 @@
 h*a*i*k*u*t*r*o*n*
 ------------------
 
-Haikutron writes nice Haiku like:
+ - Haikutron writes nice Haiku like:
 
 #### newtonian footed
 
@@ -11,4 +11,4 @@ positive art gravitons
 
 multi past research
 
-uses the datamuse API
+ - uses the datamuse API

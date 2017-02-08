@@ -8,11 +8,6 @@
             $window = $(window);
 
 
-
     }); // end DOM Ready
-
-
-
-
 
 })(jQuery);

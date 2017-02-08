@@ -1,92 +1,27 @@
-@charset "UTF-8";
-/*  © Maverick 2016
- oh glob! we're glob including folders using the grunt sass globbing
-
- see https://github.com/DennisBecker/grunt-sass-globbingfor more
-
- */
-/* target the ipad to fight against fixed position scroll weirdness */
 html {
   font-size: 16px; }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
   font-family: 'Libre Baskerville', serif;
+  position: relative;
+  display: flex;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
-  display: flex; }
+  background-image: url("https://loremflickr.com/1400/900/science,robot?random=2");
+  background-repeat: no-repeat;
+  background-size: cover; }
   @media (max-width: 767px) {
     body {
       display: block; } }
-
-.left, .right {
-  height: 100vh;
-  width: 50vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .left:after, .right:after {
-    content: '';
-    background: url("../img/01.png");
+  body:after {
     position: absolute;
-    height: 100vh;
-    width: 50vw; }
-    @media (max-width: 767px) {
-      .left:after, .right:after {
-        height: 50vh;
-        width: 100vw; } }
-  @media (max-width: 767px) {
-    .left, .right {
-      height: 50vh;
-      width: 100vw; } }
-
-.left {
-  background-color: rgba(3, 12, 6, 0.75);
-  background-image: url("https://loremflickr.com/1400/900/forest,woods?random=1"); }
-
-.right {
-  background-color: rgba(93, 52, 40, 0.75);
-  background-image: url("https://loremflickr.com/1400/900/city,train?random=2"); }
-
-h1 {
-  color: #e2e2e2;
-  font-weight: 400;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  background: rgba(0, 0, 0, 0.73);
-  padding: .75em;
-  border: 1px solid #fff;
-  z-index: 5;
-  font-size: 24px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-align: center; }
-  @media (max-width: 767px) {
-    h1 {
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 16px;
-      border: none;
-      letter-spacing: 2px;
-      margin: 0; } }
-
-span.about {
-  font-size: 16px;
-  font-style: italic;
-  text-transform: capitalize;
-  letter-spacing: normal;
-  text-align: center; }
-  @media (max-width: 767px) {
-    span.about {
-      font-size: 14px; } }
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url("../img/01.png"); }
 
 /* center anything */
 /* helper class */
@@ -104,15 +39,5 @@ span.about {
   display: table; }
 .clearfix:after {
   clear: both; }
-
-.awesome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #333;
-  font-size: 12vw;
-  color: #fff;
-  width: 100vw;
-  height: 100vh; }
 
 /*# sourceMappingURL=global.css.map */

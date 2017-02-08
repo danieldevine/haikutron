@@ -2,16 +2,16 @@
 /**
  * creates a haikutastic word object
  * using the Datamuse API
- * with s
+ *
  */
 class haikuTron
 {
-    public $dmQuery   = "ml=awesome&max=50&md";
+    public $dmQuery   = "ml=awesome";
     public $syllables = 2;
 
     public function __construct($dmQuery, $syllables)
     {
-        $this->dmQuery = $dmQuery;
+        $this->dmQuery   = $dmQuery;
         $this->syllables = $syllables;
     }
 

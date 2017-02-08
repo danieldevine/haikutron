@@ -58,15 +58,14 @@ module.exports = function(grunt) {
             options: {
 
                 map: {
-                    inline: false, // save all sourcemaps as separate files...
-                    annotation: '<%= dirs.assets %>css/maps/' // ...to the specified directory
+                    annotation: '<%= dirs.assets %>css/maps/'
                 },
 
                 processors: [
-                    require('pixrem')(), // add fallbacks for rem units
+                    require('pixrem')(),
                     require('autoprefixer')({
                         browsers: 'last 5 versions'
-                    }), // add vendor prefixes
+                    }),
                     require('cssnano')({
                         reduceIdents: false
                     })
@@ -151,7 +150,7 @@ module.exports = function(grunt) {
                         'dist/**/*.php',
                         '<%= dirs.assets %>css/global.min.css',
                         '<%= dirs.assets %>js/production.min.js'
-                   ]
+                    ]
                 },
                 options: {
                     port: 8080,
@@ -163,6 +162,6 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('default', [ 'sass_globbing', 'sass', 'concat', 'uglify', 'postcss', 'image', 'copy', 'clean', 'browserSync', 'watch', ]);
+    grunt.registerTask('default', ['sass_globbing', 'sass', 'concat', 'uglify', 'postcss', 'image', 'copy', 'clean', 'browserSync', 'watch', ]);
 
 };
