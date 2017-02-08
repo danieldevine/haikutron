@@ -1,15 +1,15 @@
 h*a*i*k*u*t*r*o*n*
 ------------------
-
  - Haikutron writes nice Haiku like:
 
-#### newtonian footed
+> #### newtonian footed
+> -----
 
-social faced chemist
+>  social faced chemist
 
-positive art gravitons
+> positive art gravitons
 
-multi past research
+> multi past research
 
  - uses the datamuse API
 
