@@ -25,16 +25,9 @@ $limthree = new haikuTron("rel_jjb=a", 1);
 $limFour  = new haikuTron("rel_jjb=young ", 1);
 $limFive  = new haikuTron("rel_jjb=man", 1);
 $limSix   = new haikuTron("rel_jjb=from", 1);
-$limSeven = new haikuTron("rel_jjb=once", 2);
+$limSeven = new haikuTron("rel_jjb=kildare", 2);
 
 $onceWas = array('once', 'was');
 $shuffled = shuffle($onceWas);
 
-foreach ( $shuffled as $shuff ):
-    return $shuff;
-    break;
-endforeach;
-
-$title = $titleOne->haWord() . " " . $titleTwo->haWord();
-
-$limerick = $limOne->haWord();
+$limerick = $limOne->haWord() . $shuffled[1];
