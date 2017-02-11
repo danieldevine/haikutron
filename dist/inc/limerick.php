@@ -17,17 +17,29 @@
  *
  */
 
-include_once('inc/class.haikuTron.php');
+require_once('inc/class.haikuTron.php');
 
-$limOne   = new haikuTron("rel_jjb=There", 1);
-$limTwo   = new haikuTron("rel_jjb=was", 1);
-$limthree = new haikuTron("rel_jjb=a", 1);
-$limFour  = new haikuTron("rel_jjb=young ", 1);
-$limFive  = new haikuTron("rel_jjb=man", 1);
-$limSix   = new haikuTron("rel_jjb=from", 1);
-$limSeven = new haikuTron("rel_jjb=kildare", 2);
+$intro     = array(
+    'There once came a young ',
+    'There was a young ',
+    'There once came an old ',
+    'There was an old '
+);
+$shuffled  = shuffle($intro);
+$limB      = new haikuTron("rel_trg=drink", 1);
+$limOne    = new haikuTron("ml=person", 1);
+$limTwo    = new haikuTron("rel_jjb=place", 2);
+$rhymeA    = $limTwo->haWord();
+$rhymeB    = $limB->haWord();
+$limThree  = new haikuTron("rel_trg=" . $rhymeA . "", 2);
+$limATwo   = new haikuTron("rel_rhy=" . $rhymeA . "", 2);
+$limBTwo   = new haikuTron("rel_rhy=" . $rhymeB . "", 1);
+$limAThree = new haikuTron("rel_rhy=" . $rhymeA . "", 2);
+$limFour   = new haikuTron("ml=" . $rhymeB . "", 2);
+$limFive   = new haikuTron("ml=" . $rhymeA . "", 1);
 
-$onceWas = array('once', 'was');
-$shuffled = shuffle($onceWas);
-
-$limerick = $limOne->haWord() . $shuffled[1];
+$limerick  = $intro[0] . $limOne->haWord() . " from " . $rhymeA . "<br />" .
+"Who " . $limThree->haWord() . " a " .$limFour->haWord() . " " . $limFive->haWord() . " " . $limATwo->haWord() . "<br />" .
+$rhymeB . "<br />" .
+$limBTwo->haWord() . "<br />" .
+$limAThree->haWord();

@@ -19,11 +19,7 @@
 
     </script>
 </head>
-<?php     require '/kint-master/Kint.class.php';
-    Kint::dump( $_SERVER ); ?>
-    
     <?php include_once('inc/limerick.php');
-
 
         function rand_color() {
           return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
@@ -32,15 +28,8 @@
         <section class="haiku" style="background-color:<?php echo rand_color(); ?>; color:<?php echo rand_color() ?>;">
             <div class="wrapper">
                  <p> <?php echo $limerick; ?></p>
-                 <div class="signed">-Limerickinator</div>
+                 <div class="signed">-Limerickinator <?php echo date('y') ?> </div>
             </div>
         </section>
     </body>
 </html>
-<p>
-    There was a man from killaloe
-    who stepped in a massive dog poo
-    he declared "I'm aware,
-    I'm in Tipp, not in Clare"
-    and in Ballina scraped clean his shoe
-</p>
