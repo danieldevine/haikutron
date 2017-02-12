@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Limericks | As Nature Intended</title>
-    <meta name="description" content="Haikutron just wants to write some cool haiku, give him some space meatbags.">
+    <title><?php echo $title; ?></title>
+    <meta name="description" content="<?php echo $description;?>">
     <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/global.min.css">
     <script>
@@ -19,17 +19,3 @@
 
     </script>
 </head>
-    <?php include_once('inc/limerick.php');
-
-        function rand_color() {
-          return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-        }?>
-    <body>
-        <section class="haiku" style="background-color:<?php echo rand_color(); ?>; color:<?php echo rand_color() ?>;">
-            <div class="wrapper">
-                 <p> <?php echo $limerick; ?></p>
-                 <div class="signed">-Limerickinator <?php echo date('y') ?> </div>
-            </div>
-        </section>
-    </body>
-</html>

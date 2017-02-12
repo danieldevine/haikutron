@@ -1,4 +1,6 @@
 /node_modules
+/dist/vendor
+/dist/config
 dploy.yaml
 /npm-debug.log
 /src/img/store

@@ -15,6 +15,10 @@ class haikuTron
         $this->syllables = $syllables;
     }
 
+    /**
+     * [haWord description]
+     * @return string 
+     */
     public function haWord()
     {
         $curl = curl_init();
