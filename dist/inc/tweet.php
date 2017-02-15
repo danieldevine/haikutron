@@ -19,7 +19,7 @@ $url = 'https://api.twitter.com/1.1/statuses/update.json';
 $requestMethod = 'POST';
 
 $postfields = array(
-    'status' => $limerick,
+    'status' => $limerick
 );
 
 $twitter = new TwitterAPIExchange($settings);

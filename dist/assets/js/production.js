@@ -1,4 +1,4 @@
-/*! haikutron - v0.0.1 - 2017-02-11 */(function($) {
+/*! haikutron - v0.0.1 - 2017-02-13 */(function($) {
     'use strict';
 
     $(document).ready(function() {

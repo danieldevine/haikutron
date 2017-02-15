@@ -17,18 +17,16 @@
  *
  */
 
-require_once('inc/class.haikuTron.php');
-
-
+require_once('inc/class.limrixx.php');
 
 /**
  * Stock limerick starting phrases
  * @var array
  */
 $intro = array(
-    'There once came a young ',
+    'There came a young ',
     'There was a young ',
-    'There once came an old ',
+    'There came an old ',
     'There was an old '
 );
 
@@ -38,58 +36,53 @@ $intro = array(
  */
 $shuffled    = shuffle($intro);
 
-$limB        = new haikuTron("rel_trg=drink", 1);
-$limOne      = new haikuTron("ml=person", 1);
-$limTwo      = new haikuTron("rel_jjb=place", 2);
+$lineOne       = new limrixx("rel_spc=man", 2, "n");
+$oneOne        = $lineOne->lxWord();
+$lineTwo       = new limrixx("ml=city", 2, "n");
+$oneTwo        = $lineTwo->lxWord();
 
-/**
- * The A rhyme
- * @var string
- */
-$rhymeA      = $limTwo->haWord();
+$lineThree     = new limrixx("sp=*d", 2, "v");
+$twoOne        = $lineThree->lxWord();
+$lineFour      = new limrixx("ml=guy", 3, "n");
+$twoTwo        = $lineFour->lxWord();
+$lineFive      = new limrixx("rel_rhy=". $oneTwo, 3, "n");
+$twoThree      = $lineFive->lxWord();
 
-/**
- * The B rhyme
- * @var string
- */
-$rhymeB      = $limB->haWord();
 
-$limThree    = new haikuTron("rel_trg=" . $rhymeA . "", 2);
-/**
- * vars that rhyme with the previous line endings (AA BB A)
- * @var string
- */
-$limATwo     = new haikuTron("rel_rhy=" . $rhymeA . "", 2);
-$limBTwo     = new haikuTron("rel_rhy=" . $rhymeB . "", 1);
-$limAThree   = new haikuTron("rel_rhy=" . $rhymeA . "", 2);
+$lineSix       = new limrixx("ml=love", 2, "n");
+$threeOne      = $lineSix->lxWord();
+$lineSeven     = new limrixx("ml=love", 1, "v");
+$threeTwo      = $lineSeven->lxWord();
+$lineEight     = new limrixx("ml=love", 1, "v");
+$threeThree    = $lineEight->lxWord();
+$lineNine      = new limrixx("ml=love", 1, "n");
+$threeFour     = $lineNine->lxWord();
 
-$limFour     = new haikuTron("rel_trg=drink", 2);
-$limFive     = new haikuTron("rel_trg=drink", 1);
+$lineTen       = new limrixx("ml=love", 1, "n");
+$fourOne       = $lineTen->lxWord();
+$lineEleven    = new limrixx("ml=love", 1, "v");
+$fourTwo       = $lineEleven->lxWord();
+$lineTwelve    = new limrixx("ml=love", 1, "n");
+$fourThree     = $lineTwelve->lxWord();
+$lineThirteen  = new limrixx("rel_rhy=". $threeFour, 2, "n");
+$fourFour      = $lineThirteen->lxWord();
 
-$limSix      = new haikuTron("ml=" . $rhymeA . "", 2);
-$limSeven    = new haikuTron("rel_trg=drink", 1);
-
-$limEight    = new haikuTron("rel_trg=drink", 1);
-$limNine     = new haikuTron("rel_trg=drink", 1);
-$limTen      = new haikuTron("rel_trg=drink", 1);
-
-$limEleven   = new haikuTron("rel_trg=drink", 1);
-$limTwelve   = new haikuTron("mrel_trg=drink", 3);
-$limFourteen = new haikuTron("rel_trg=drink", 2);
+$lineFourteen  = new limrixx("ml=love", 2, "n");
+$fiveOne       = $lineFourteen->lxWord();
+$lineFifteen   = new limrixx("ml=love", 2, "n");
+$fiveTwo       = $lineFifteen->lxWord();
+$lineSixteen   = new limrixx("ml=love", 2, "n");
+$fiveThree     = $lineSixteen->lxWord();
+$lineSeventeen = new limrixx("rel_rhy=". $oneTwo, 2, "n");
+$fiveFour      = $lineSeventeen->lxWord();
 
 
 /**
  * Builds the Limerick
  * @var string
  */
-$limerick    = $intro[0] . $limOne->haWord() . " from " . $rhymeA . "<br />" .
-"Who " . $limThree->haWord() . " a " .$limFour->haWord() . " " . $limFive->haWord() . " " . $limATwo->haWord() . "<br />" .
-$limSix->haWord() . " " . $limSeven->haWord() . " " . $rhymeB . "<br />" .
-$limEight->haWord() . " " . $limNine->haWord() . " " . $limTen->haWord() . " " . $limBTwo->haWord() . "<br />" .
-$limEleven->haWord() . " " . $limTwelve->haWord() . " " . $limFourteen->haWord() . " " . $limAThree->haWord();
-
-
-/**
- * tweet the mutha
- */
-include_once('inc/tweet.php');
+$limerick   = $intro[0] . $oneOne . " from " . $oneTwo . "\n" .
+"who " . $twoOne . " a " . $twoTwo ." ". $twoThree . "\n" .
+$threeOne ." ". $threeTwo ." ". $threeThree ." ". $threeFour . "\n" .
+$fourOne ." ". $fourTwo ." ". $fourThree ." ". $fourFour . "\n" .
+$fiveOne ." ". $fiveTwo ." ". $fiveThree ." ". $fiveFour;

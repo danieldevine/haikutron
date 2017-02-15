@@ -16,13 +16,13 @@ class haikuTron
     }
 
     /**
-     * [haWord description]
-     * @return string 
+     * build a datamuse query 
+     * @return string
      */
     public function haWord()
     {
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, 'https://api.datamuse.com/words?' . $this->dmQuery . "&max=100&md=s");
+        curl_setopt($curl, CURLOPT_URL, 'https://api.datamuse.com/words?' . $this->dmQuery . "&max=500&md=s");
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
         $resp = curl_exec($curl);
