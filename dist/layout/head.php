@@ -8,6 +8,7 @@
     <meta name="description" content="<?php echo $description;?>">
     <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/global.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

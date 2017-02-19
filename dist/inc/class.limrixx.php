@@ -24,7 +24,7 @@ class limrixx
     public function lxWord()
     {
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, 'https://api.datamuse.com/words?' . $this->dmQuery . "&max=500&md=sp" );
+        curl_setopt($curl, CURLOPT_URL, 'https://api.datamuse.com/words?' . $this->dmQuery . "&max=1000&md=sp" );
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
         $resp = curl_exec($curl);

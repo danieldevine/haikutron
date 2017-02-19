@@ -1,0 +1,14 @@
+.button--tweet,
+.button--reload {
+    display: inline-block;
+    border: 1px solid #fff;
+    background-color: #28c728;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+
+.button--reload {
+    background-color: red;
+}

@@ -1,6 +1,6 @@
-h*a*i*k*u*t*r*o*n*
+h*a*i*k*u*t*r*o*n*i*x
 ------------------
- - Haikutron writes nice Haiku like:
+ - Haikutronix writes nice Haiku like:
 
 > #### newtonian footed
 > -----
@@ -14,3 +14,12 @@ h*a*i*k*u*t*r*o*n*
  - uses the datamuse API
 
 [https://haiku.coderjerk.com/](https://haiku.coderjerk.com/)
+
+
+L*i*m*r*i*x*x
+------------------
+- writes horrible Limricks
+- tries to tweet them
+- uses the datamuse API
+
+[https://haiku.coderjerk.com/limrixx.php](https://haiku.coderjerk.com/limrixx.php)

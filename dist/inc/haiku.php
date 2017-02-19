@@ -25,7 +25,9 @@ $hkThreeOne   = new haikuTron("rel_jjb=robot", 2);
 $hkThreeTwo   = new haikuTron("ml=the", 1);
 $hkThreeThree = new haikuTron("ml=humanity", 2);
 
-$title = $titleOne->haWord() . " " . $titleTwo->haWord();
+$title = "( " . $titleOne->haWord() . " " . $titleTwo->haWord() . " ) \n";
 
-$haiku = $hkOneOne->haWord() . " " . $hkOneTwo->haWord() . " " . $hkOneThree->haWord() . "<br />" . $hkTwoOne->haWord() . " " . $hkTwoTwo->haWord() . " " . $hkTwoThree->haWord() . "<br />" . $hkThreeOne->haWord() . " " . $hkThreeTwo->haWord() . " " . $hkThreeThree->haWord() . "<br />";
+$haiku = "\n" . $hkOneOne->haWord() . " " . $hkOneTwo->haWord() . " " . $hkOneThree->haWord() . "\n"
+. $hkTwoOne->haWord() . " " . $hkTwoTwo->haWord() . " " . $hkTwoThree->haWord() . "\n"
+. $hkThreeOne->haWord() . " " . $hkThreeTwo->haWord() . " " . $hkThreeThree->haWord() . "\n";
 ?>
