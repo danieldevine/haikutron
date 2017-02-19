@@ -47,7 +47,7 @@ body {
     padding: 0;
     text-transform: capitalize; }
   .haiku p {
-    margin: 0;
+    margin-top: -50px;
     white-space: pre-wrap; }
   .haiku hr {
     margin: 0;
