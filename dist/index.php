@@ -12,7 +12,7 @@ include('inc/haiku.php');
              <h1 class="haiku--title"><?php echo $title; ?></h1>
              <hr />
              <p class="haiku--body"><?php echo $haiku; ?></p>
-             <div class="signed">-Haikutron</div>
+             <div class="signed">-@Haikutronix</div>
              <a href="#" class="button--tweet">Approve</a>
              <a href="#" class="button--reload">Reset</a>
              <script type="text/javascript">
