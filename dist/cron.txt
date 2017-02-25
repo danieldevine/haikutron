@@ -1,0 +1,3 @@
+MAILTO=jerk@coderjerk.com
+30 */1 * * * /usr/bin/wget https://haiku.coderjerk.com/limrixx.php
+30 */1 * * * /usr/bin/wget https://haiku.coderjerk.com/haiku.php

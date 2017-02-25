@@ -1,7 +1,7 @@
 <?php
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
-require_once($_SERVER['DOCUMENT_ROOT'] .'/config/settingshkt.php');
+require_once($_SERVER['DOCUMENT_ROOT'] .'/config/settings.php');
 
 
 

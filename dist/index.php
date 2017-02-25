@@ -1,6 +1,6 @@
 <?php
-$title = "Haikutron | Contemplative Haiku Bot";
-$description = "Haikutron just wants to write some cool haiku, give him some space meatbags.";
+$title = "Haikutronix | Contemplative Haiku Bot";
+$description = "Haikutronix just wants to write some cool haiku, give him some space meatbags.";
 include_once('layout/head.php');
 include('inc/haiku.php');
     function rand_color() {
