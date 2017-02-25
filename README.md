@@ -11,6 +11,8 @@ h*a*i*k*u*t*r*o*n*i*x
 
 > multi past research
 
+ - tweets the results
+
  - uses the datamuse API
 
 [https://haiku.coderjerk.com/](https://haiku.coderjerk.com/)
