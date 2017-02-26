@@ -1,7 +1,7 @@
 <?php
 
 require_once('vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
-require_once('config/settings.php');
+require_once('config/settingshkt.php');
 
 /**
  * Tokens, keys and secrets.
