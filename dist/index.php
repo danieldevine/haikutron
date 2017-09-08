@@ -3,11 +3,10 @@ $title = "Haikutronix | Contemplative Haiku Bot";
 $description = "Haikutronix just wants to write some cool haiku, give him some space meatbags.";
 include_once('layout/head.php');
 include('inc/haiku.php');
-    function rand_color() {
-      return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-    }?>
+require_once 'inc/functions.php';
+?>
 <body>
-    <section class="haiku" style="background-color:<?php echo rand_color(); ?>; color:<?php echo rand_color() ?>;">
+    <section class="haiku" style="background-color:<?php echo randColor(); ?>; color:<?php echo randColor() ?>;">
         <div class="wrapper">
              <h1 class="haiku--title"><?php echo $title; ?></h1>
              <hr />

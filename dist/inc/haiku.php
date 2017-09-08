@@ -1,33 +1,42 @@
 <?php
-
 /**
  * Rules of haiku:
  * 5 syllables
  * 7 syllables
  * 5 syllables
  * 0 humans
+ * 
+ * PHP Version 7.1
+ *
+ * @category Haiku
+ * @package  Haikutronix
+ * @author   Dan Devine <jerk@coderjerk.com>
+ * @license  WTFPL http://www.wtfpl.net/txt/copying/
+ * @link     https://haiku.coderjerk.com
  */
 
-include_once('inc/class.haikuTron.php');
+require_once 'inc/class.HaikuTron.php';
 
-$titleOne     = new haikuTron("rel_jjb=science", 4);
-$titleTwo     = new haikuTron("rel_jjb=animal", 2);
+$titleOne     = new HaikuTron("rel_jjb=science", 4);
+$titleTwo     = new HaikuTron("rel_jjb=animal", 2);
 
-$hkOneOne     = new haikuTron("rel_jjb=science", 2);
-$hkOneTwo     = new haikuTron("rel_jjb=man", 1);
-$hkOneThree   = new haikuTron("ml=scientist", 2);
+$hkOneOne     = new HaikuTron("rel_jjb=science", 2);
+$hkOneTwo     = new HaikuTron("rel_jjb=man", 1);
+$hkOneThree   = new HaikuTron("ml=scientist", 2);
 
-$hkTwoOne     = new haikuTron("rel_jjb=quantum", 3);
-$hkTwoTwo     = new haikuTron("rel_jjb=technology", 1);
-$hkTwoThree   = new haikuTron("ml=physics", 3);
+$hkTwoOne     = new HaikuTron("rel_jjb=quantum", 3);
+$hkTwoTwo     = new HaikuTron("rel_jjb=technology", 1);
+$hkTwoThree   = new HaikuTron("ml=physics", 3);
 
-$hkThreeOne   = new haikuTron("rel_jjb=robot", 2);
-$hkThreeTwo   = new haikuTron("ml=the", 1);
-$hkThreeThree = new haikuTron("ml=humanity", 2);
+$hkThreeOne   = new HaikuTron("rel_jjb=robot", 2);
+$hkThreeTwo   = new HaikuTron("ml=the", 1);
+$hkThreeThree = new HaikuTron("ml=humanity", 2);
 
 $title = "( " . $titleOne->haWord() . " " . $titleTwo->haWord() . " ) \n";
 
-$haiku = "\n" . $hkOneOne->haWord() . " " . $hkOneTwo->haWord() . " " . $hkOneThree->haWord() . "\n"
-. $hkTwoOne->haWord() . " " . $hkTwoTwo->haWord() . " " . $hkTwoThree->haWord() . "\n"
-. $hkThreeOne->haWord() . " " . $hkThreeTwo->haWord() . " " . $hkThreeThree->haWord() . "\n";
+$haiku = "\n" . $hkOneOne->haWord() . " " . $hkOneTwo->haWord() .
+ " " . $hkOneThree->haWord() . "\n" . $hkTwoOne->haWord() . " " .
+$hkTwoTwo->haWord() . " " . $hkTwoThree->haWord() . "\n" . 
+$hkThreeOne->haWord() . " " . $hkThreeTwo->haWord() . " " .
+$hkThreeThree->haWord() . "\n";
 ?>

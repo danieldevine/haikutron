@@ -1,9 +1,18 @@
 <?php
+/**
+ * Tweets on button click
+ * 
+ * PHP Version 7.1
+ * 
+ * @category Tweet-action
+ * @package  Haikutronix
+ * @author   Dan Devine <jerk@coderjerk.com>
+ * @license  WTFPL http://www.wtfpl.net/txt/copying/
+ * @link     https://haiku.coderjerk.com
+ */
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
-require_once($_SERVER['DOCUMENT_ROOT'] .'/config/settingshkt.php');
-
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/settingshkt.php';
 
 $haikuuu = trim($_POST['haiku']);
 
@@ -18,13 +27,13 @@ if (empty($_POST['haiku'])) { //Name cannot be empty
 if (!empty($errors)) { //If errors in validation
     $form_data['success'] = false;
     $form_data['errors']  = $errors;
-}
-else { //If not, process the form, and return true on success
+} else { //If not, process the form, and return true on success
     $form_data['success'] = true;
     $form_data['posted'] = 'Data Was Posted Successfully';
 
     /**
      * Tokens, keys and secrets.
+     * 
      * @var array
      */
     $settings = array(

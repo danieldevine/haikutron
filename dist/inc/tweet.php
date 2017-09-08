@@ -1,10 +1,22 @@
 <?php
+/**
+ * Tweets Limerick
+ * 
+ * PHP Version 7.1
+ * 
+ * @category Tweet
+ * @package  Haikutronix
+ * @author   Dan Devine <jerk@coderjerk.com>
+ * @license  WTFPL http://www.wtfpl.net/txt/copying/
+ * @link     https://haiku.coderjerk.com
+ */
 
-require_once('vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
-require_once('config/settings.php');
+require_once 'vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php';
+require_once 'config/settings.php';
 
 /**
  * Tokens, keys and secrets.
+ * 
  * @var array
  */
 $settings = array(
