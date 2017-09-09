@@ -5,6 +5,8 @@ dploy.yaml
 /npm-debug.log
 /src/img/store
 /dist/.htaccess
+.DS_Store
+/*.DS_Store
 /.sass-cache
 #ignore all the glob maps for the scss folder, but dont ignore partials and global.scss
 /src/scss/*.scss
