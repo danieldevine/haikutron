@@ -27,5 +27,7 @@ require_once 'inc/functions.php';
              <div class="signed">-@Haikutronix</div>
         </div>
     </section>
-<?php require_once 'inc/tweet-haiku.php'; ?>
-<?php require_once 'layout/footer.php'; ?>
+<?php 
+require_once 'inc/tweet-haiku.php';
+require_once 'layout/footer.php';   
+?>

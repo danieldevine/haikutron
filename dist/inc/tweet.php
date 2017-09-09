@@ -26,7 +26,6 @@ $settings = array(
     'consumer_secret' => $CONSUMER_SECRET
 );
 
-
 $url = 'https://api.twitter.com/1.1/statuses/update.json';
 $requestMethod = 'POST';
 

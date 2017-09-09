@@ -1,8 +1,20 @@
 <?php
+/**
+ * Human friendly interface for Haikutronix
+ *
+ * PHP Version 7.1
+ * 
+ * @category Index
+ * @package  Haikutronix
+ * @author   Dan Devine <jerk@coderjerk.com>
+ * @license  WTFPL http://www.wtfpl.net/txt/copying/
+ * @link     https://haiku.coderjerk.com
+ */
+
 $title = "Haikutronix | Contemplative Haiku Bot";
 $description = "Haikutronix just wants to write some cool haiku, give him some space meatbags.";
-include_once('layout/head.php');
-include('inc/haiku.php');
+require 'layout/head.php';
+require 'inc/haiku.php';
 require_once 'inc/functions.php';
 ?>
 <body>
@@ -52,4 +64,4 @@ require_once 'inc/functions.php';
              </script>
         </div>
     </section>
-<?php include_once('layout/footer.php'); ?>
+<?php require 'layout/footer.php'; ?>
