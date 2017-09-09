@@ -13,3 +13,4 @@ dploy.yaml
 !/src/scss/global.scss
 !/src/scss/partials/*.scss
 /dploy.yaml
+/npm-debug.log.*
