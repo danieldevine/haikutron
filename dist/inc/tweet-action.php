@@ -1,9 +1,9 @@
 <?php
 /**
  * Tweets on button click
- * 
+ *
  * PHP Version 7.1
- * 
+ *
  * @category Tweet-action
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -33,7 +33,7 @@ if (!empty($errors)) { //If errors in validation
 
     /**
      * Tokens, keys and secrets.
-     * 
+     *
      * @var array
      */
     $settings = array(

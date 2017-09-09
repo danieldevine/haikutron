@@ -12,3 +12,4 @@ dploy.yaml
 /src/scss/*.scss
 !/src/scss/global.scss
 !/src/scss/partials/*.scss
+/dploy.yaml

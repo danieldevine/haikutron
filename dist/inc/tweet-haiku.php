@@ -1,9 +1,9 @@
 <?php
 /**
  * Tweets Haiku
- * 
+ *
  * PHP Version 7.1
- * 
+ *
  * @category Tweet-Haiku
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -16,7 +16,7 @@ require_once 'config/settingshkt.php';
 
 /**
  * Tokens, keys and secrets.
- * 
+ *
  * @var array
  */
 $settings = array(

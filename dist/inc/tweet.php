@@ -1,9 +1,9 @@
 <?php
 /**
  * Tweets Limerick
- * 
+ *
  * PHP Version 7.1
- * 
+ *
  * @category Tweet
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -16,7 +16,7 @@ require_once 'config/settings.php';
 
 /**
  * Tokens, keys and secrets.
- * 
+ *
  * @var array
  */
 $settings = array(
