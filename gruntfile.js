@@ -154,7 +154,7 @@ module.exports = function(grunt) {
                 },
                 options: {
                     port: 8080,
-                    proxy: "dev.<%= pkg.name %>",
+                    proxy: "<%= pkg.name %>.dev",
                     watchTask: true
                 }
             }

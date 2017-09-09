@@ -12,7 +12,6 @@
  * @link     https://haiku.coderjerk.com
  */
 
-
 /**
  * Creates a random colour
  * 

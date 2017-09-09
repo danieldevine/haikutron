@@ -12,8 +12,8 @@
  */
 
 /**
- * HaikuTron class 
- * 
+ * HaikuTron class
+ *
  * @category Limrixx
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -28,12 +28,12 @@ class Limrixx
 
     /**
      * __construct
-     * 
-     * @param mixed $dmQuery 
-     * @param mixed $syllables 
-     * @param mixed $partOfSpeech 
-     * 
-     * @return mixed 
+     *
+     * @param mixed $dmQuery
+     * @param mixed $syllables
+     * @param mixed $partOfSpeech
+     *
+     * @return mixed
      */
     public function __construct($dmQuery, $syllables, $partOfSpeech)
     {
@@ -44,15 +44,15 @@ class Limrixx
 
     /**
      * Builds a datamuse query
-     * 
+     *
      * @return string
      */
     public function lxWord()
     {
         $curl = curl_init();
-        $url  = 'https://api.datamuse.com/words?' . 
+        $url  = 'https://api.datamuse.com/words?' .
         $this->dmQuery . "&max=1000&md=sp";
-        
+
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 

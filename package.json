@@ -1,12 +1,12 @@
 {
-  "name": "haikutron",
+  "name": "haikutronix",
   "version": "0.0.1",
   "description": "Haiku writing script",
   "author": "Dan Devine",
   "license": "WTFPL",
   "repository": {
     "type": "git",
-    "url": "git@github.com:danieldevine/haikutron.git"
+    "url": "git@github.com:danieldevine/haikutronix.git"
   },
   "devDependencies": {
       "autoprefixer": "^6.1.2",
