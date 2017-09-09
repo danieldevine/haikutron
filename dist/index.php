@@ -3,7 +3,7 @@
  * Human friendly interface for Haikutronix
  *
  * PHP Version 7.1
- * 
+ *
  * @category Index
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>

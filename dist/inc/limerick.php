@@ -2,9 +2,9 @@
 /**
  * This file is secretly named 'fungus the dog'
  * because Nina said so.
- * 
+ *
  * PHP Version 7.1
- * 
+ *
  * @category HaikuTron
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -16,7 +16,7 @@ require_once 'inc/class.Limrixx.php';
 
 /**
  * Stock limerick starting phrases
- * 
+ *
  * @var array
  */
 $intro = array(
@@ -29,7 +29,7 @@ $intro = array(
 
 /**
  * Shuffle the starting phrases
- * 
+ *
  * @var array
  */
 $shuffled    = shuffle($intro);
@@ -71,7 +71,7 @@ $fiveFour      = $lineSeventeen->lxWord();
 
 /**
  * Builds the Limerick
- * 
+ *
  * @var string
  */
 $limerick = $intro[0] . $oneOne . " from " . $oneTwo . "\n" .

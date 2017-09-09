@@ -1,9 +1,9 @@
 <?php
 /**
  * The interface for Limrixx
- * 
+ *
  * PHP Version 7.1
- * 
+ *
  * @category Limrixx
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -24,7 +24,7 @@ require_once 'inc/functions.php';
              <div class="signed">-@limrixx '<?php echo date('y') ?> </div>
         </div>
     </section>
-<?php 
-require 'inc/tweet.php'; 
+<?php
+require 'inc/tweet.php';
 require 'layout/footer.php';
 ?>

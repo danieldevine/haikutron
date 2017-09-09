@@ -12,8 +12,8 @@
  */
 
 /**
- * HaikuTron class 
- * 
+ * HaikuTron class
+ *
  * @category HaikuTron
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
@@ -27,11 +27,11 @@ class HaikuTron
 
     /**
      * __construct
-     * 
-     * @param mixed $dmQuery 
-     * @param mixed $syllables 
-     * 
-     * @return mixed 
+     *
+     * @param mixed $dmQuery
+     * @param mixed $syllables
+     *
+     * @return mixed
      */
     public function __construct($dmQuery, $syllables)
     {
@@ -40,15 +40,15 @@ class HaikuTron
     }
 
     /**
-     * Builds a datamuse query 
-     * 
+     * Builds a datamuse query
+     *
      * @return string
      */
     public function haWord()
     {
         $curl = curl_init();
         $url = 'https://api.datamuse.com/words?' . $this->dmQuery . "&max=500&md=s";
-        
+
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
