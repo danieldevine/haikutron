@@ -10,30 +10,28 @@
  * @license  WTFPL http://www.wtfpl.net/txt/copying/
  * @link     https://haiku.coderjerk.com
  */
+$root     = $_SERVER["DOCUMENT_ROOT"];
+$site_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
 
-require_once 'vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php';
+require "vendor/autoload.php";
+
+use Abraham\TwitterOAuth\TwitterOAuth;
 require_once 'config/settings.php';
 
-/**
- * Tokens, keys and secrets.
- *
- * @var array
- */
-$settings = array(
-    'oauth_access_token' => $ACCESS_TOKEN,
-    'oauth_access_token_secret' => $ACCESS_TOKEN_SECRET,
-    'consumer_key' => $CONSUMER_KEY,
-    'consumer_secret' => $CONSUMER_SECRET
-);
+header('Content-Type: image/jpeg');
+$img = imageLimerick($limerick);
+imagepng($img, 'limrixx.png');
+imagedestroy($img);
 
-$url = 'https://api.twitter.com/1.1/statuses/update.json';
-$requestMethod = 'POST';
+$image = $site_url.'limrixx.png';
 
-$postfields = array(
-    'status' => $limerick
-);
+$connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
-$twitter = new TwitterAPIExchange($settings);
-$twitter->buildOauth($url, $requestMethod)
-    ->setPostfields($postfields)
-    ->performRequest();
+$message = "Limerixx 2.0";
+$media = $connection->upload('media/upload', ['media' => $image]);
+$parameters = [
+    'status' => $message,
+    'media_ids' => implode(',', [$media->media_id_string])
+];
+
+$result = $connection->post('statuses/update', $parameters);

@@ -66,7 +66,7 @@ class Limrixx
 
         foreach ($result as $res) {
             if ($res['numSyllables'] == $this->syllables
-                && $res['tags'][0] == $this->partOfSpeech
+                // && $res['tags'][0] == $this->partOfSpeech
             ) :
                 return $res['word'];
                 break;
