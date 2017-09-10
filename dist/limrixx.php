@@ -45,6 +45,7 @@ require_once 'inc/functions.php';
                         })
                         .done(function (data) {
                             $('.haiku--body').replaceWith('This Limerick has ben tweeted by @limrixx,<br /> click reset to see another.');
+                            console.log(data);
                         })
                         .fail(function () {
                             console.log("error");

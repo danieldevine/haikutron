@@ -13,10 +13,11 @@
 $root     = $_SERVER["DOCUMENT_ROOT"];
 $site_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
 
-require "vendor/autoload.php";
+require $root . "/vendor/autoload.php";
+require $root . "/inc/functions.php";
 
 use Abraham\TwitterOAuth\TwitterOAuth;
-require_once 'config/settings.php';
+require_once $root . '/config/settings.php';
 
 $limerick = trim($_POST['limerick']);
 
@@ -40,11 +41,11 @@ if (!empty($errors)) { //If errors in validation
     imagepng($img, 'limrixx.png');
     imagedestroy($img);
 
-    $image = $site_url.'limrixx.png';
+    $image = $site_url.'/limrixx.png';
 
     $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
-    $message = "Limrixx says hi";
+    $message = "I wrote this for you: ";
     $media = $connection->upload('media/upload', ['media' => $image]);
     $parameters = [
         'status' => $message,
