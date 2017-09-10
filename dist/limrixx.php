@@ -23,9 +23,10 @@ require_once 'inc/functions.php';
              <p class="haiku--body"><?php echo $limerick; ?></p>
              <div class="signed">-@limrixx '<?php echo date('y') ?> </div>
         </div>
-    </section>
-     <a href="#" class="button--tweet">Approve</a>
+             <a href="#" class="button--tweet">Approve</a>
              <a href="#" class="button--reload">Reset</a>
+    </section>
+
              <script type="text/javascript">
                 jQuery(document).ready(function ($) {
                     $('.button--reload').on('click', function (e) {
