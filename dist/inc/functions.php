@@ -40,6 +40,6 @@ function imageLimerick($limerick)
     $font  = $_SERVER["DOCUMENT_ROOT"] .'/assets/fonts/LibreBaskerville-Italic.ttf';
 
     // image, font size, rotation, left, top
-    imagettftext($im, 16, 0, 20, 20, $randomTwo, $font, $limerick);
+    imagettftext($im, 16, 0, 20, 90, $randomTwo, $font, $limerick);
     return $im;
 }
