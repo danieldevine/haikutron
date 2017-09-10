@@ -4,7 +4,7 @@
  *
  * PHP Version 7.1
  *
- * @category Tweet
+ * @category Tweet-limerick
  * @package  Haikutronix
  * @author   Dan Devine <jerk@coderjerk.com>
  * @license  WTFPL http://www.wtfpl.net/txt/copying/
@@ -20,6 +20,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 require_once $root . '/config/settings.php';
 
 $limerick = trim($_POST['limerick']);
+$message = trim($_POST['message']);
 
 $errors = array(); //To store errors
 $form_data = array(); //Pass back the data to `form.php`
@@ -45,7 +46,7 @@ if (!empty($errors)) { //If errors in validation
 
     $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
-    $message = "I wrote this for you: ";
+    $message = $message;
     $media = $connection->upload('media/upload', ['media' => $image]);
     $parameters = [
         'status' => $message,

@@ -36,15 +36,17 @@ require_once 'inc/functions.php';
                     $('.button--tweet').on('click', function (e) {
                         e.preventDefault();
                         var limerick = $('p').text();
+                        var message = limerick.split('\n')[0];
                         $.ajax({
                                 url: '/inc/tweet-limerick.php',
                                 type: 'POST',
                                 data: {
-                                    limerick: limerick
+                                    limerick: limerick,
+                                    message: message
                                 },
                         })
                         .done(function (data) {
-                            $('.haiku--body').replaceWith('This Limerick has ben tweeted by @limrixx,<br /> click reset to see another.');
+                            $('.haiku--body').replaceWith('This Limerick has been tweeted by @limrixx,<br /> click reset to see another.');
                             console.log(data);
                         })
                         .fail(function () {
