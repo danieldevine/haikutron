@@ -38,10 +38,10 @@ if (!empty($errors)) { //If errors in validation
 
     header('Content-Type: image/jpeg');
     $img = imageLimerick($limerick);
-    imagepng($img, 'limrixx.png');
+    imagepng($img, '../goodlimrix.png');
     imagedestroy($img);
 
-    $image = $site_url.'/limrixx.png';
+    $image = $site_url.'/goodlimrix.png';
 
     $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
