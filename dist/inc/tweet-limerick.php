@@ -20,9 +20,9 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 require_once $root . '/config/settings.php';
 
 $limerick = trim($_POST['limerick']);
-$message = trim($_POST['message']);
+$message  = trim($_POST['message']);
 
-$errors = array(); //To store errors
+$errors    = array(); //To store errors
 $form_data = array(); //Pass back the data to `form.php`
 
 /* Validate the form on the server side */
