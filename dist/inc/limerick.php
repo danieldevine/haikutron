@@ -35,7 +35,7 @@ $intro = array(
  */
 $shuffled      = shuffle($intro);
 
-$theme         = "hate";
+$theme         = "robot";
 
 $lineOne       = new Limrixx("rel_spc=man", 2, "n");
 $oneOne        = $lineOne->lxWord();
