@@ -20,14 +20,14 @@ $errors = array(); //To store errors
 $form_data = array(); //Pass back the data to `form.php`
 
 /* Validate the form on the server side */
-if (empty($_POST['haiku'])) { //Name cannot be empty
+if (empty($_POST['haiku'])) {
     $errors['name'] = 'haiku is blank, you have failed.';
 }
 
-if (!empty($errors)) { //If errors in validation
+if (!empty($errors)) {
     $form_data['success'] = false;
     $form_data['errors']  = $errors;
-} else { //If not, process the form, and return true on success
+} else { 
     $form_data['success'] = true;
     $form_data['posted'] = 'Data Was Posted Successfully';
 

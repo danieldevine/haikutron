@@ -12,7 +12,7 @@
  */
 
 /**
- * HaikuTron class
+ * Limrixx class
  *
  * @category Limrixx
  * @package  Haikutronix

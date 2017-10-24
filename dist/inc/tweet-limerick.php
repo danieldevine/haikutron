@@ -22,18 +22,18 @@ require_once $root . '/config/settings.php';
 $limerick = trim($_POST['limerick']);
 $message  = trim($_POST['message']);
 
-$errors    = array(); //To store errors
-$form_data = array(); //Pass back the data to `form.php`
+$errors    = array();
+$form_data = array();
 
-/* Validate the form on the server side */
-if (empty($_POST['limerick'])) { //Name cannot be empty
+/* Validate the form */
+if (empty($_POST['limerick'])) {
     $errors['name'] = 'limerick is blank, you have failed.';
 }
 
-if (!empty($errors)) { //If errors in validation
+if (!empty($errors)) {
     $form_data['success'] = false;
     $form_data['errors']  = $errors;
-} else { //If not, process the form, and return true on success
+} else { 
     $form_data['success'] = true;
     $form_data['posted'] = 'Data Was Posted Successfully';
 

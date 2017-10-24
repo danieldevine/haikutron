@@ -35,8 +35,19 @@ $intro = array(
  */
 $shuffled      = shuffle($intro);
 
+/**
+ * Let's dictate the overall mood!
+ * Trial and error suggests its best
+ * to be broad as possible to return the best results.
+ *
+ * @var string
+ */
 $theme         = "sad";
 
+/**
+ * So now let's write out the lines for the Limerick.
+ * Refer to DataMuse docs for what each rel_* is doing.
+ */
 $lineOne       = new Limrixx("rel_spc=human", 2, "n");
 $oneOne        = $lineOne->lxWord();
 $lineTwo       = new Limrixx("rel_trg=".$theme, 2, "n");
@@ -73,7 +84,7 @@ $lineSeventeen = new Limrixx("rel_rhy=". $oneTwo, 2, "n");
 $fiveFour      = $lineSeventeen->lxWord();
 
 /**
- * Builds the Limerick
+ * The assembled Limerick
  *
  * @var string
  */

@@ -24,8 +24,8 @@ function randColor()
 
 
 /**
- * Use imageLimerick to turn a
- * limerick into an image.
+ * imageLimerick turns a limerick
+ * into an image of a limerick.
  *
  * @param string $limerick The limerick
  *
