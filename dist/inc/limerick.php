@@ -25,7 +25,7 @@ $intro = array(
     'There came an old ',
     'There was an old ',
     'There once was a ',
-    'There was a dumb '
+    'There was a thicc '
 );
 
 /**
@@ -37,7 +37,7 @@ $shuffled      = shuffle($intro);
 
 $theme         = "sad";
 
-$lineOne       = new Limrixx("rel_spc=man", 2, "n");
+$lineOne       = new Limrixx("rel_spc=human", 2, "n");
 $oneOne        = $lineOne->lxWord();
 $lineTwo       = new Limrixx("rel_trg=".$theme, 2, "n");
 $oneTwo        = $lineTwo->lxWord();
