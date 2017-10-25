@@ -102,6 +102,8 @@
  $fourOne ." ". $fourTwo ." ". $fourThree ." ". $fourFour . "\n" .
  $fiveOne ." ". $fiveTwo ." ". $fiveThree ." a ". $fiveFour;
 
+ $message = $intro[0] . $oneOne . " from " . $oneTwo;
+
 
 
      header('Content-Type: image/jpeg');
