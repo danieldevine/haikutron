@@ -20,7 +20,7 @@
  require $root . "/inc/functions.php";
  use Abraham\TwitterOAuth\TwitterOAuth;
  require_once $root . '/config/settings.php';
- require_once '/inc/class.Limrixx.php';
+ require_once $root . '/inc/class.Limrixx.php';
 
  /**
   * Stock limerick starting phrases
