@@ -50,7 +50,7 @@
   *
   * @var string
   */
- $theme         = "mad";
+ $theme         = "christmas";
 
  /**
   * So now let's write out the lines for the Limerick.
@@ -103,8 +103,6 @@
  $fiveOne ." ". $fiveTwo ." ". $fiveThree ." a ". $fiveFour;
 
  $message = $intro[0] . $oneOne . " from " . $oneTwo;
-
-
 
      header('Content-Type: image/jpeg');
      $img = imageLimerick($limerick);

@@ -42,7 +42,7 @@ $shuffled      = shuffle($intro);
  *
  * @var string
  */
-$theme         = "sad";
+$theme         = "christmas";
 
 /**
  * So now let's write out the lines for the Limerick.
